@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.pen_btn{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    z-index: 2;
+}
+.collection{
+    list-style-type: none;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #9c9797;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    border-radius: 15px;
+    left: 10px;
+    
+    transform: scale(0);
+}
+.collection>li{
+    padding: 12px 10px;
+}
+.collection>li:hover{
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+
+.collectanimation{
+    animation: spring 0.5s linear forwards;
+    transform-origin: bottom right;
+}
+ @keyframes spring{
+     0%{
+         transform: scale(0);
+     }
+     20%{
+         transform: scale(1);
+     }
+     40%{
+         transform: scale(0.8);
+     }
+     60%{
+         transform: scale(1);
+     }
+     80%{
+         transform: scale(0.9);
+     }
+     100%{
+         transform: scale(1);
+     }
+ }
+
+ #xmark{
+     display: none;
+ }
+
+ .first{
+     position: relative;
+ }
+ .expand{
+     height: 40px;
+     width: 150px;
+     background-color: #fff;
+     box-shadow: 0px 0px 10px rgb(168, 164, 164);
+     position: absolute;
+     top: 5px;
+     display: none;
+     right: -160px;
+ }
+
+ .first{
+     border-radius: 15px 15px 0px 0px;
+ }
+ .last{
+     border-radius: 0px 0px 15px 15px;
+ }
